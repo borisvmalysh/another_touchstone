@@ -8,14 +8,22 @@
           display:none;                             /*Do not display*/
         }
       }
-      @media (min-width: 500px){                    /*WHEN minimum screen width is at least 500px*/
+      @media (min-width: 500px){                    /*WHEN screen width is over 500px*/
         body{                                       /*show body*/
           backgound-color:red;                      /*with red background*/
         }
+        h1::before{                                         /*before h1*/
+          content:"This screen is over 500 pixels wide";    /*show this content*/
+        }
       }
-      @media (max-width: 499px){                    /*WHEN screen width is smaller 499px*/
+      @media (max-width: 499px){                    /*WHEN screen width is less than 499px*/
+        
         body{                                       /*show body*/ 
           background-color:pink;                    /*with pink background*/
+        }
+        
+        h1::before{                                          /*before h1*/
+          content:"Screen less than 500px wide"              /*show this content*/
         }
       }
       
@@ -23,6 +31,7 @@
   </head>                                                <!--Head section end-->
   
   <body>                                                 <!--Body section start-->
+    <h1></h1>
     <p>This is a paragraph</p>
     <p>This is another paragraph</p>
     <p class="screen-only">This paragraph will only appear on a screen, but won't be seen when the page is printed out.</p> <!--Class name is arbitrary-->
