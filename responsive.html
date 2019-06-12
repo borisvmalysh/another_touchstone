@@ -3,9 +3,9 @@
 
   <head>                                                 <!--Head section start-->
     <style>                                                 /*styles section start*/
-      @media print{
-        .screen-only {                              /*. selects the class*/
-          display:none;                              /*@media means "create a media query" */
+      @media print{                                 /*@media means "apply this style when my content is shown at this media" (in this case - when printed)*/
+        .screen-only {                              /*. selects the class. This is how we select the content to apply style to.*/
+          display:none;                             /*Do not display*/
         }
       }
     </style>                                                <!--styles section end-->
@@ -13,7 +13,7 @@
   
   <body>                                                 <!--Body section start-->
     <p>This is a paragraph</p>
-    <p><This is another paragraph</p>
+    <p>This is another paragraph</p>
     <p class="screen-only">This paragraph will only appear on a screen, but won't be seen when the page is printed out.</p> <!--Class name is arbitrary-->
   </body>                                                <!--Body section end-->
   
