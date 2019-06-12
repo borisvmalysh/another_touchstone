@@ -40,9 +40,16 @@
           content:"Screen less than 500px wide"              /*show this content*/
         }
       }
-      .container{
-        pisplay:flex;
-        flex-wrap:wrap;
+      .container{                                         /*for the .container class*/
+        display:flex;                                     /*set flexible displaying*/
+        flex-wrap:wrap;                                   /*and wrapping */
+      }
+      .container > div{                                   /*for the div (being the immediate child of .container class)*/
+        background-color: springgrieen;                   /*set the following style*/
+        font-size: 20px;
+        margin: 20px;
+        padding: 20px;
+        width: 200px;
       }
       
     </style>                                                <!--styles section end-->
